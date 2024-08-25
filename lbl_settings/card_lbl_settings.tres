@@ -1,0 +1,9 @@
+[gd_resource type="LabelSettings" load_steps=2 format=3 uid="uid://bv8awx53dqeo1"]
+
+[ext_resource type="FontFile" uid="uid://djw8d131xmrk1" path="res://fonts/m3x6.ttf" id="1_ovxw1"]
+
+[resource]
+line_spacing = 0.0
+font = ExtResource("1_ovxw1")
+font_color = Color(0.168627, 0.168627, 0.168627, 1)
+shadow_color = Color(1, 1, 1, 0.243137)

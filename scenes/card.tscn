@@ -1,0 +1,65 @@
+[gd_scene load_steps=8 format=3 uid="uid://dc00vhr7qfm5o"]
+
+[ext_resource type="Script" path="res://scripts/card.gd" id="1_s0f5k"]
+[ext_resource type="Texture2D" uid="uid://bjq740p6k1ucj" path="res://sprites/card_base.png" id="1_xrcri"]
+[ext_resource type="Texture2D" uid="uid://b4ahgvu47gxrs" path="res://sprites/card_base_cost.png" id="2_6aiyb"]
+[ext_resource type="FontFile" uid="uid://djw8d131xmrk1" path="res://fonts/m3x6.ttf" id="3_l2wa8"]
+[ext_resource type="LabelSettings" uid="uid://bv8awx53dqeo1" path="res://lbl_settings/card_lbl_settings.tres" id="4_v37j2"]
+[ext_resource type="Texture2D" uid="uid://oqoqloom1g3i" path="res://sprites/card_image_slash.png" id="5_tmqap"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_5ah32"]
+font = ExtResource("3_l2wa8")
+font_color = Color(0.980392, 1, 0.721569, 1)
+
+[node name="Card" type="Node2D"]
+script = ExtResource("1_s0f5k")
+card_name = null
+card_desc = null
+card_cost = null
+
+[node name="BaseCardSprite" type="Sprite2D" parent="."]
+texture = ExtResource("1_xrcri")
+
+[node name="CostDisplay" type="Node2D" parent="."]
+position = Vector2(-27, -50)
+
+[node name="CostDisplaySprite" type="Sprite2D" parent="CostDisplay"]
+texture = ExtResource("2_6aiyb")
+
+[node name="CostLbl" type="Label" parent="CostDisplay"]
+offset_left = -1.0
+offset_top = -8.0
+offset_right = 9.0
+offset_bottom = 8.0
+text = "2"
+label_settings = SubResource("LabelSettings_5ah32")
+
+[node name="NameDisplay" type="Node2D" parent="."]
+
+[node name="NameLbl" type="Label" parent="NameDisplay"]
+offset_left = -17.0
+offset_top = -59.0
+offset_right = 34.0
+offset_bottom = -44.0
+text = "SLASH"
+label_settings = ExtResource("4_v37j2")
+horizontal_alignment = 1
+
+[node name="ImageDisplay" type="Node2D" parent="."]
+
+[node name="ImageDisplaySprite" type="Sprite2D" parent="ImageDisplay"]
+position = Vector2(1, -10)
+scale = Vector2(1.3647, 1.3647)
+texture = ExtResource("5_tmqap")
+
+[node name="DescDisplay" type="Node2D" parent="."]
+position = Vector2(-29, 10)
+
+[node name="DescLbl" type="Label" parent="DescDisplay"]
+offset_top = 7.0
+offset_right = 60.0
+offset_bottom = 47.0
+text = "Deals 2 DMG in chosen area"
+label_settings = ExtResource("4_v37j2")
+vertical_alignment = 1
+autowrap_mode = 3

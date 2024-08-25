@@ -1,0 +1,20 @@
+[gd_scene load_steps=2 format=3 uid="uid://crpv58ucst8da"]
+
+[ext_resource type="Script" path="res://scenes/ui_node.gd" id="1_erw84"]
+
+[node name="UINode" type="Node2D"]
+script = ExtResource("1_erw84")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Create Card 1" type="Button" parent="."]
+offset_left = 15.0
+offset_top = 22.0
+offset_right = 126.0
+offset_bottom = 53.0
+text = "Create card 1"
+
+[node name="Spawn" type="Node2D" parent="."]
+position = Vector2(548, 290)
+
+[connection signal="pressed" from="Create Card 1" to="." method="_on_create_card_1_pressed"]
